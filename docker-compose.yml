@@ -48,12 +48,12 @@ services:
       - ENV=dev
       - WEBUI_AUTH=True
       - WEBUI_NAME=TMD AI
-      - WEBUI_URL=http://${WEBUI_ADDRESS}:4992
-      - WEBUI_SECRET_KEY=${WEBUI_SECRET_KEY}
+      - WEBUI_URL='http://${WEBUI_ADDRESS}:4992'
+      - WEBUI_SECRET_KEY='${WEBUI_SECRET_KEY}'
       - ENABLE_OLLAMA_API=true
       - IMAGE_GENERATION_ENGINE=openai
-      - IMAGES_OPENAI_API_KEY=${DALL_E_API_KEY)
-      - IMAGES_OPENAI_API_BASE_URL=${DALL_E_API_BASE_URL}
+      - IMAGES_OPENAI_API_KEY='${DALL_E_API_KEY)'
+      - IMAGES_OPENAI_API_BASE_URL='${DALL_E_API_BASE_URL}'
     extra_hosts:
       - host.docker.internal:host-gateway
     restart: unless-stopped
